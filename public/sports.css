@@ -1,0 +1,12 @@
+@media (max-width: 1080px) {
+    #featured-sports {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 64px;
+    }
+    .sport-card {
+        max-width: 60vw;
+        width: 60vw;
+    }
+}

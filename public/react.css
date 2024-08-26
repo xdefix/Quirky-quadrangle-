@@ -1,0 +1,8 @@
+@media (max-width: 650px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+    }
+}

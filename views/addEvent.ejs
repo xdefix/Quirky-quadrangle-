@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/register.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='https://fonts.googleapis.com/css?family=Wendy One' rel='stylesheet'>
+    <title>The Quirky Quadrangle</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/events">
+                <span class="material-symbols-rounded">
+                    arrow_back
+                </span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form action="/addEvent" method="post" enctype="multipart/form-data" class="form">
+            <h2 class="form-title">New Event</h2>
+            <label for="content" class="form-label">Content:</label>
+            <textarea id="post-content" name="content" placeholder="Write about your event here"
+                class="form-content" maxlength="250"></textarea>
+                
+            <p class="form-label">Maximum of 250 words. Word writen:<span id="wordCount">0</span></p>
+
+            <button type="submit" class="form-button">Post</button>
+        </form>
+
+    </div>
+
+    
+    <script>
+        const textArea = document.getElementById('post-content');
+        const wordCountDisplay = document.getElementById('wordCount');
+        const wordLimit = 250;
+
+        textArea.addEventListener('input', () => {
+            let text = textArea.value;
+            let words = text.trim().split(/\s+/);
+            let wordCount = words.length;
+
+            // Check if the word count exceeds the limit
+            if (wordCount > wordLimit) {
+                // Trim the text to the word limit
+                text = words.slice(0, wordLimit).join(' ');
+                textArea.value = text;
+                wordCount = wordLimit;
+            }
+
+            wordCountDisplay.textContent = wordCount;
+        });
+
+    </script>
+</body>
+
+</html>

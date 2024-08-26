@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quirky Quadrangle</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='https://fonts.googleapis.com/css?family=Wendy One' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="material-symbols-rounded" id="menu">
+                menu
+            </span>
+            <ul>
+                <a href="/feed">
+                    <li>
+                        <span class="material-symbols-rounded">
+                            diversity_3
+                        </span>
+                        Forum
+                    </li>
+                </a>
+                <li><a href="/sports">
+                        <span class="material-symbols-rounded">
+                            sports_kabaddi
+                        </span>
+                        Sports
+                    </a>
+                </li>
+                <li><a href="/events">
+                        <span class="material-symbols-rounded">
+                            event
+                        </span>
+                        Events
+                    </a>
+                </li>
+                <li><a href="/userPosts">
+                        <span class="material-symbols-rounded">
+                            post
+                        </span>
+                        Posts
+                    </a>
+                </li>
+                <li><a href="/userProfile">
+                        <span class="material-symbols-rounded">
+                            person
+                        </span>
+                        Profile
+                    </a>
+                </li>
+                <li><a href="/logout">
+                        <span class="material-symbols-rounded">
+                            logout
+                        </span>
+                        Log out
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="acc">
+        <img src="<%= user.picture %>" alt="Profile Picture" class="profile-picture">
+        <h2 class="name">
+            <%= user.name %>
+                <%= user.surname %>
+        </h2>
+        <div class="buttons">
+            <a href="/userPosts" class="edit">My Posts</a>
+            <a href="/createPost" class="edit">Create Post</a>
+            <a href="/user/<%= user.id%>/edit" class="edit">Edit Profile</a>
+        </div>
+    </div>
+</body>
+
+</html>

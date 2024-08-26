@@ -1,0 +1,101 @@
+/* CSS for the article page */
+
+body {
+    font-family: 'Arial Black';
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #F5F5DC;
+}
+
+.title {
+    background: #F9E88F;
+    background: linear-gradient(90deg, #F9E88F 31%, #F5BD8B 70%, #F5A9A4);
+    color: #3B668C;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+article {
+    padding: 20px;
+}
+
+h2 {
+    color: #091016bd;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+p {
+    color: #091016d0;
+    line-height: 1.5;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+img{
+    height: 100%;
+}
+
+
+header {
+    margin: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #9AC7E6;
+    padding: 1px;
+    z-index: 100;
+    border-radius: 15px;
+}
+
+.material-symbols-rounded {
+    transform: scale(1.5);
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    cursor: pointer;
+}
+nav span {
+    padding: 1rem;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: block;
+    color: #f6836f;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a:hover {
+    color: #F2C53D;
+}
+
+nav a.active {
+    font-weight: bold;
+    background-color: #F27052;
+}
+
+nav a.active:hover {
+    background-color: #F2C53D;
+}
